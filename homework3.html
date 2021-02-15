@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="facebook.css">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="referrer" content="origin-when-crossorigin" id="meta_referrer">
+        <script nonce="">window._cstart = +new Date();</script>
+        <script
+            nonce="">function envFlush(a) { function b(b) { for (var c in a) b[c] = a[c] } window.requireLazy ? window.requireLazy(["Env"], b) : (window.Env = window.Env || {}, b(window.Env)) } envFlush({ "ajaxpipe_token": "AXgcPBBW4hnQHPRsWms", "timeslice_heartbeat_config": { "pollIntervalMs": 33, "idleGapThresholdMs": 60, "ignoredTimesliceNames": { "requestAnimationFrame": true, "Event listenHandler mousemove": true, "Event listenHandler mouseover": true, "Event listenHandler mouseout": true, "Event listenHandler scroll": true }, "isHeartbeatEnabled": true, "isArtilleryOn": false }, "shouldLogCounters": true, "timeslice_categories": { "react_render": true, "reflow": true }, "sample_continuation_stacktraces": true, "dom_mutation_flag": true, "stack_trace_limit": 30, "timesliceBufferSize": 5000, "show_invariant_decoder": false, "compat_iframe_token": "AQ7y-4u0kv-5wPxwlJc", "isCQuick": false });</script>
+        <style nonce=""></style>
+        <script
+            nonce="">__DEV__ = 0; CavalryLogger = window.CavalryLogger || function (a) { this.lid = a, this.transition = !1, this.metric_collected = !1, this.is_detailed_profiler = !1, this.instrumentation_started = !1, this.pagelet_metrics = {}, this.events = {}, this.ongoing_watch = {}, this.values = { t_cstart: window._cstart }, this.piggy_values = {}, this.bootloader_metrics = {}, this.resource_to_pagelet_mapping = {}, this.initializeInstrumentation && this.initializeInstrumentation() }, CavalryLogger.prototype.setIsDetailedProfiler = function (a) { this.is_detailed_profiler = a; return this }, CavalryLogger.prototype.setTTIEvent = function (a) { this.tti_event = a; return this }, CavalryLogger.prototype.setValue = function (a, b, c, d) { d = d ? this.piggy_values : this.values; (typeof d[a] === "undefined" || c) && (d[a] = b); return this }, CavalryLogger.prototype.getLastTtiValue = function () { return this.lastTtiValue }, CavalryLogger.prototype.setTimeStamp = CavalryLogger.prototype.setTimeStamp || function (a, b, c, d) { this.mark(a); var e = this.values.t_cstart || this.values.t_start; e = d ? e + d : CavalryLogger.now(); this.setValue(a, e, b, c); this.tti_event && a == this.tti_event && (this.lastTtiValue = e, this.setTimeStamp("t_tti", b)); return this }, CavalryLogger.prototype.mark = typeof console === "object" && console.timeStamp ? function (a) { console.timeStamp(a) } : function () { }, CavalryLogger.prototype.addPiggyback = function (a, b) { this.piggy_values[a] = b; return this }, CavalryLogger.instances = {}, CavalryLogger.id = 0, CavalryLogger.getInstance = function (a) { typeof a === "undefined" && (a = CavalryLogger.id); CavalryLogger.instances[a] || (CavalryLogger.instances[a] = new CavalryLogger(a)); return CavalryLogger.instances[a] }, CavalryLogger.setPageID = function (a) { if (CavalryLogger.id === 0) { var b = CavalryLogger.getInstance(); CavalryLogger.instances[a] = b; CavalryLogger.instances[a].lid = a; delete CavalryLogger.instances[0] } CavalryLogger.id = a }, CavalryLogger.now = function () { return window.performance && performance.timing && performance.timing.navigationStart && performance.now ? performance.now() + performance.timing.navigationStart : new Date().getTime() }, CavalryLogger.prototype.measureResources = function () { }, CavalryLogger.prototype.profileEarlyResources = function () { }, CavalryLogger.getBootloaderMetricsFromAllLoggers = function () { }, CavalryLogger.start_js = function () { }, CavalryLogger.done_js = function () { }; CavalryLogger.getInstance().setTTIEvent("t_domcontent"); CavalryLogger.prototype.measureResources = function (a, b) { if (!this.log_resources) return; var c = "bootload/" + a.name; if (this.bootloader_metrics[c] !== void 0 || this.ongoing_watch[c] !== void 0) return; var d = CavalryLogger.now(); this.ongoing_watch[c] = d; "start_" + c in this.bootloader_metrics || (this.bootloader_metrics["start_" + c] = d); b && !("tag_" + c in this.bootloader_metrics) && (this.bootloader_metrics["tag_" + c] = b); if (a.type === "js") { c = "js_exec/" + a.name; this.ongoing_watch[c] = d } }, CavalryLogger.prototype.stopWatch = function (a) { if (this.ongoing_watch[a]) { var b = CavalryLogger.now(), c = b - this.ongoing_watch[a]; this.bootloader_metrics[a] = c; var d = this.piggy_values; a.indexOf("bootload") === 0 && (d.t_resource_download || (d.t_resource_download = 0), d.resources_downloaded || (d.resources_downloaded = 0), d.t_resource_download += c, d.resources_downloaded += 1, d["tag_" + a] == "_EF_" && (d.t_pagelet_cssload_early_resources = b)); delete this.ongoing_watch[a] } return this }, CavalryLogger.getBootloaderMetricsFromAllLoggers = function () { var a = {}; Object.values(window.CavalryLogger.instances).forEach(function (b) { b.bootloader_metrics && Object.assign(a, b.bootloader_metrics) }); return a }, CavalryLogger.start_js = function (a) { for (var b = 0; b < a.length; ++b)CavalryLogger.getInstance().stopWatch("js_exec/" + a[b]) }, CavalryLogger.done_js = function (a) { for (var b = 0; b < a.length; ++b)CavalryLogger.getInstance().stopWatch("bootload/" + a[b]) }, CavalryLogger.prototype.profileEarlyResources = function (a) { for (var b = 0; b < a.length; b++)this.measureResources({ name: a[b][0], type: a[b][1] ? "js" : "" }, "_EF_") }; CavalryLogger.getInstance().log_resources = true; CavalryLogger.getInstance().setIsDetailedProfiler(true); window.CavalryLogger && CavalryLogger.getInstance().setTimeStamp("t_start");</script>
+        <noscript>
+            <meta http-equiv="refresh" content="0; URL=/?_fb_noscript=1" />
+        </noscript>
+        <link rel="manifest" href="/data/manifest/" crossorigin="use-credentials">
+        <title id="pageTitle">Facebook - เข้าสู่ระบบหรือสมัครใช้งาน</title>
+        <meta property="og:site_name" content="Facebook">
+        <meta property="og:url" content="https://www.facebook.com/">
+        <meta property="og:image" content="https://www.facebook.com/images/fb_icon_325x325.png">
+        <meta property="og:locale" content="th_TH">
+        <link rel="search" type="application/opensearchdescription+xml" href="/osd.xml" title="Facebook">
+        <link rel="canonical" href="https://www.facebook.com/">
+        <link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.facebook.com/?locale2=th_TH">
+        <link rel="alternate" media="handheld" href="https://m.facebook.com/?locale2=th_TH">
+        <link rel="alternate" hreflang="x-default" href="https://www.facebook.com/">
+        <link rel="alternate" hreflang="en" href="https://www.facebook.com/">
+        <link rel="alternate" hreflang="ar" href="https://ar-ar.facebook.com/">
+        <link rel="alternate" hreflang="bg" href="https://bg-bg.facebook.com/">
+        <link rel="alternate" hreflang="bs" href="https://bs-ba.facebook.com/">
+        <link rel="alternate" hreflang="ca" href="https://ca-es.facebook.com/">
+        <link rel="alternate" hreflang="da" href="https://da-dk.facebook.com/">
+        <link rel="alternate" hreflang="el" href="https://el-gr.facebook.com/">
+        <link rel="alternate" hreflang="es" href="https://es-la.facebook.com/">
+        <link rel="alternate" hreflang="es-es" href="https://es-es.facebook.com/">
+        <link rel="alternate" hreflang="fa" href="https://fa-ir.facebook.com/">
+        <link rel="alternate" hreflang="fi" href="https://fi-fi.facebook.com/">
+        <link rel="alternate" hreflang="fr" href="https://fr-fr.facebook.com/">
+        <link rel="alternate" hreflang="fr-ca" href="https://fr-ca.facebook.com/">
+        <link rel="alternate" hreflang="hi" href="https://hi-in.facebook.com/">
+        <link rel="alternate" hreflang="hr" href="https://hr-hr.facebook.com/">
+        <link rel="alternate" hreflang="id" href="https://id-id.facebook.com/">
+        <link rel="alternate" hreflang="it" href="https://it-it.facebook.com/">
+        <link rel="alternate" hreflang="ko" href="https://ko-kr.facebook.com/">
+        <link rel="alternate" hreflang="mk" href="https://mk-mk.facebook.com/">
+        <link rel="alternate" hreflang="ms" href="https://ms-my.facebook.com/">
+        <link rel="alternate" hreflang="pl" href="https://pl-pl.facebook.com/">
+        <link rel="alternate" hreflang="pt" href="https://pt-br.facebook.com/">
+        <link rel="alternate" hreflang="pt-pt" href="https://pt-pt.facebook.com/">
+        <link rel="alternate" hreflang="ro" href="https://ro-ro.facebook.com/">
+        <link rel="alternate" hreflang="sl" href="https://sl-si.facebook.com/">
+        <link rel="alternate" hreflang="sr" href="https://sr-rs.facebook.com/">
+        <link rel="alternate" hreflang="th" href="https://th-th.facebook.com/">
+        <link rel="alternate" hreflang="vi" href="https://vi-vn.facebook.com/">
+        <meta name="description"
+            content="สร้างบัญชีหรือเข้าสู่ระบบ Facebook เพื่อเชื่อมต่อกับเพื่อน ครอบครัว และคนอื่นๆ ที่คุณรู้จัก แชร์รูปภาพและวิดีโอ ส่งข้อความ และรับอัพเดตต่างๆ">
+        <meta name="robots" content="noodp,noydir">
+        <link rel="shortcut icon" href="https://static.xx.fbcdn.net/rsrc.php/yo/r/iRmz9lCMBD2.ico">
+        <link type="text/css" rel="stylesheet"
+            href="https://static.xx.fbcdn.net/rsrc.php/v3/y7/l/2,cross/UNHI3KOlp8G.css?_nc_x=Ij3Wp8lg5Kz"
+            data-bootloader-hash="AxwTs" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet"
+            href="https://static.xx.fbcdn.net/rsrc.php/v3/yQ/l/2,cross/2uODDt_1zdI.css?_nc_x=Ij3Wp8lg5Kz"
+            data-bootloader-hash="xSkeG" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet"
+            href="https://static.xx.fbcdn.net/rsrc.php/v3/ye/l/2,cross/SVu1uO9yQMp.css?_nc_x=Ij3Wp8lg5Kz"
+            data-bootloader-hash="eeYF5" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet"
+            href="https://static.xx.fbcdn.net/rsrc.php/v3/yN/l/2,cross/Gd1_00ja0pI.css?_nc_x=Ij3Wp8lg5Kz"
+            data-bootloader-hash="CAbIm" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet"
+            href="https://static.xx.fbcdn.net/rsrc.php/v3/y1/l/2,cross/Ddfv_c5zZxX.css?_nc_x=Ij3Wp8lg5Kz"
+            data-bootloader-hash="IpLkB" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet"
+            href="https://static.xx.fbcdn.net/rsrc.php/v3/ya/l/2,cross/XjCowePnkGu.css?_nc_x=Ij3Wp8lg5Kz"
+            data-bootloader-hash="vE83f" data-nonblocking="1" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet"
+            href="https://static.xx.fbcdn.net/rsrc.php/v3/yJ/l/2,cross/OPOonAYuXBh.css?_nc_x=Ij3Wp8lg5Kz"
+            data-bootloader-hash="P8MgO" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet"
+            href="https://static.xx.fbcdn.net/rsrc.php/v3/yn/l/2,cross/iWbQtMrJW8n.css?_nc_x=Ij3Wp8lg5Kz"
+            data-bootloader-hash="4l/Jz" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/yz/r/jcBZHUAk_Pz.js?_nc_x=Ij3Wp8lg5Kz"
+            data-bootloader-hash="PJVgx" crossorigin="anonymous" nonce=""></script>
+
+
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3iT1u4/y6/l/th_TH/l6oNQccmAQc.js?_nc_x=Ij3Wp8lg5Kz"
+            rel="preload" as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3iT1u4/y6/l/th_TH/l6oNQccmAQc.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/MmWA1-os61Y.js?_nc_x=Ij3Wp8lg5Kz" rel="preload"
+            as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/MmWA1-os61Y.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/Hl1BdMq__z1.js?_nc_x=Ij3Wp8lg5Kz" rel="preload"
+            as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/Hl1BdMq__z1.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/L3PKdJiO_8z.js?_nc_x=Ij3Wp8lg5Kz" rel="preload"
+            as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/L3PKdJiO_8z.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link
+            href="data:text/css; charset=utf-8,%23bootloader_P_mr5{height:42px;}.bootloader_P_mr5{display:block!important;}"
+            rel="preload" as="style">
+        <link rel="stylesheet" type="text/css"
+            href="data:text/css; charset=utf-8,%23bootloader_P_mr5{height:42px;}.bootloader_P_mr5{display:block!important;}">
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3/yK/r/-lmwZFuPDmj.js?_nc_x=Ij3Wp8lg5Kz" rel="preload"
+            as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/yK/r/-lmwZFuPDmj.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3iOkm4/y8/l/th_TH/NuYhjDHhBqA.js?_nc_x=Ij3Wp8lg5Kz"
+            rel="preload" as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3iOkm4/y8/l/th_TH/NuYhjDHhBqA.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3iS2g4/yE/l/th_TH/syDBqhuYqtT.js?_nc_x=Ij3Wp8lg5Kz"
+            rel="preload" as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3iS2g4/yE/l/th_TH/syDBqhuYqtT.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3ijN54/yv/l/th_TH/5i-IdmBzQ-2.js?_nc_x=Ij3Wp8lg5Kz"
+            rel="preload" as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3ijN54/yv/l/th_TH/5i-IdmBzQ-2.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/2FesatjYzEB.js?_nc_x=Ij3Wp8lg5Kz" rel="preload"
+            as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/2FesatjYzEB.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/MAE8IGfHcZi.js?_nc_x=Ij3Wp8lg5Kz" rel="preload"
+            as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/MAE8IGfHcZi.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3/yh/r/m2ap7jZCskb.js?_nc_x=Ij3Wp8lg5Kz" rel="preload"
+            as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/yh/r/m2ap7jZCskb.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/sxe3dj1RS9p.js?_nc_x=Ij3Wp8lg5Kz" rel="preload"
+            as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/sxe3dj1RS9p.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/mGY9zSIwUbG.js?_nc_x=Ij3Wp8lg5Kz" rel="preload"
+            as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/mGY9zSIwUbG.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/50G1HL-8vAs.js?_nc_x=Ij3Wp8lg5Kz" rel="preload"
+            as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/50G1HL-8vAs.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/SmuWDYn1CdY.js?_nc_x=Ij3Wp8lg5Kz" rel="preload"
+            as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/SmuWDYn1CdY.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-z0NZqsVLWj.js?_nc_x=Ij3Wp8lg5Kz" rel="preload"
+            as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-z0NZqsVLWj.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3/yn/r/SjhbdPV43nX.js?_nc_x=Ij3Wp8lg5Kz" rel="preload"
+            as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/yn/r/SjhbdPV43nX.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3/yE/r/SxIrUBqruoy.js?_nc_x=Ij3Wp8lg5Kz" rel="preload"
+            as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/yE/r/SxIrUBqruoy.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3ivi94/yZ/l/th_TH/B849cZV1oF6.js?_nc_x=Ij3Wp8lg5Kz"
+            rel="preload" as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3ivi94/yZ/l/th_TH/B849cZV1oF6.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+        <link href="https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/JopZtdti8dq.js?_nc_x=Ij3Wp8lg5Kz" rel="preload"
+            as="script" crossorigin="anonymous">
+        <script src="https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/JopZtdti8dq.js?_nc_x=Ij3Wp8lg5Kz" async=""
+            crossorigin="anonymous"></script>
+    </head>
+    <style>
+
+    </style>
+</head>
+
+<body
+    class="fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh chrome webkit win x1-5 Locale_th_TH cores-gte4 _19_u hasAXNavMenubar">
+
+    <div class="_li" id="u_0_3">
+        <div class="_3_s0 _1toe _3_s1 uiBoxGray noborder">
+        </div>
+        <div id="containerGlobal" class="uiContextualLayerParent">
+            <div class="fb_content clearfix " id="content" role="main">
+                <div>
+                    <div class="_8esj _95k9 _8esf _8opv _8f3m _8ilg _8icx _8op_ _95ka">
+                        <div class="_8esk">
+                            <div class="_8esl">
+                                <div class="_8ice"><img class="fb_logo _8ilh img"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Facebook">
+                                </div>
+                                <h2 class="_8eso">Facebook ช่วยคุณเชื่อมต่อและแชร์กับผู้คนมากมายรอบตัวคุณ</h2>
+                            </div>
+                            <div class="_8esn">
+                                <div class="_8iep _8icy _9ahz _9ah-">
+                                    <div class="_6luv _52jv">
+                                        <form class="_featuredLogin__formContainer" data-testid="royal_login_form"
+                                            action="" method="post" onsubmit="" id="u_0_a"><input type="hidden"
+                                                name="jazoest" value="2899" autocomplete="off"><input type="hidden"
+                                                name="lsd" value="AVoVLehOAN0" autocomplete="off">
+                                            <div>
+                                                <div class="_6lux"><input type="text" class="inputtext _55r1 _6luy"
+                                                        name="email" id="email" data-testid="royal_email"
+                                                        placeholder="อีเมลหรือหมายเลขโทรศัพท์มือถือ" autofocus="1"
+                                                        aria-label="อีเมลหรือหมายเลขโทรศัพท์มือถือ"></div>
+                                                <div class="_6lux"><input type="password" class="inputtext _55r1 _6luy"
+                                                        name="pass" id="pass" data-testid="royal_pass"
+                                                        placeholder="รหัสผ่าน" aria-label="รหัสผ่าน"></div>
+                                            </div><input type="hidden" autocomplete="off" name="login_source"
+                                                value="comet_headerless_login"><input type="hidden" autocomplete="off"
+                                                name="next" value="">
+                                            <div class="_6ltg"><button value="1"
+                                                    class="_42ft _4jy0 _6lth _4jy6 _4jy1 selected _51sy" name="login"
+                                                    data-testid="royal_login_button" type="submit"
+                                                    id="u_0_b">เข้าสู่ระบบ</button></div>
+                                            <div class="_6ltj"><a href="">ลืมรหัสผ่านใช่หรือไม่</a>
+                                            </div>
+                                            <div class="_8icz"></div>
+                                            <div class="_6ltg"><a role="button"
+                                                    class="_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy" href="#"
+                                                    ajaxify="/reg/spotlight/" id="u_0_2"
+                                                    data-testid="open-registration-form-button"
+                                                    rel="async">สร้างบัญชีใหม่</a></div>
+                                        </form>
+                                    </div>
+                                    <div id="reg_pages_msg" class="_58mk"><a href="#" class="_8esh">สร้างเพจ</a>
+                                        สำหรับบุคคลมีชื่อเสียง วงดนตรี หรือธุรกิจ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+    </div>
+
+
+    </div>
+
+</body>
+
+</html>
